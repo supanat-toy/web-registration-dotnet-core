@@ -30,3 +30,5 @@
 /Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Debug/netcoreapp2.1/web-registration.dll
 /Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Debug/netcoreapp2.1/web-registration.pdb
 /Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Debug/netcoreapp2.1/web-registration.csproj.CopyComplete
+/Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Debug/netcoreapp2.1/Razor/Views/Registration/Index.g.cshtml.cs
+/Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Debug/netcoreapp2.1/Razor/Views/Attendee/Index.g.cshtml.cs

@@ -1,0 +1,38 @@
+@model IEnumerable<Attendee>
+@{
+    ViewData["Title"] = "Registration";
+}
+<link rel="stylesheet" href="~/css/registration.css" />
+
+<div class="container body-content">
+    <div class="table-responsive filterable">
+        <table class="table table-striped">
+            <thead>
+                <tr class="filters">
+                    <th><input type="text" class="form-control" placeholder="Code"></th>
+                    <th><input type="text" class="form-control" placeholder="Name"></th>
+                    <th><input type="text" class="form-control" placeholder="Checked time"></th>
+                    <th><input type="text" class="form-control" placeholder="#"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model) 
+                {
+                    <tr>
+                        <td>@item.code</td>
+                        <td>@item.name</td>
+                        <td>@item.checkedDateTime</td>
+                        @{
+                            if (item.isChecked) {
+                                <td><a href="/Registration/UnCheckin?code=@item.code">Uncheck-in</a></td>
+                            } else {
+                                <td><a href="/Registration/Checkin?code=@item.code">Check-in</a></td>
+                            }
+                        }
+                    </tr>
+                }  
+            </tbody>
+        </table>
+    </div>
+</div>
+
