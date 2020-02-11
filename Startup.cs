@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Swagger;
 using System.IO;
 using Microsoft.OpenApi.Models;
+using web_registration.Providers;
 
 namespace web_registration
 {
@@ -51,6 +52,7 @@ namespace web_registration
             services.AddDbContext<ApplicationDBContext>(options => 
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection")
             ));
+            services.AddTransient<IAttendeeProvider, AttendeeProvider>();
 
             
         }

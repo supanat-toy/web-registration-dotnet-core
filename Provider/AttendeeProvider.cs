@@ -8,7 +8,7 @@ using web_registration.Models;
 
 namespace web_registration.Providers
 {
-    public class AttendeeProvider
+    public class AttendeeProvider : IAttendeeProvider
     {
         private readonly ApplicationDBContext _context;
 
@@ -30,14 +30,14 @@ namespace web_registration.Providers
             if (code != null) {
                 attendee = _context.Attendee.Where(x => x.code == code).FirstOrDefault();
             } else if (name != null) {
-                attendee = _context.Attendee.Where(x => x.name == name).FirstOrDefault();
+                attendee = _context.Attendee.Where(x => x.nameEN == name).FirstOrDefault();
             }
             return attendee;
         }
 
         public List<Attendee> GetCheckedInAttendees()
         {
-            List<Attendee> attendees = _context.Attendee.Where(x => x.isChecked).ToList();
+            List<Attendee> attendees = _context.Attendee.Where(x => x.isChecked ?? false).ToList();
             return attendees;
         }
 

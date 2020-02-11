@@ -1,7 +1,19 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
+@font-face {
+    font-family: 'FCActiveRegular';
+    src: url('../fonts/FCActiveRegular.eot?#iefix') format('embedded-opentype'),  
+         url('../fonts/FCActiveRegular.woff') format('woff'), 
+         url('../fonts/FCActiveRegular.ttf')  format('truetype'), 
+         url('../fonts/FCActiveRegular.svg#FCActiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
 body {
-    padding-top: 50px;
+    font-family: 'FCActiveRegular' !important;
+    /* padding-top: 50px; */
     padding-bottom: 20px;
 }
 
@@ -34,4 +46,8 @@ body {
     .carousel-caption {
         display: none;
     }
+}
+
+.form-control {
+    font-size: 17px;
 }

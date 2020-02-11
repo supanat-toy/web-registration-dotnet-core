@@ -2,7 +2,35 @@
 @{
     ViewData["Title"] = "Registration";
 }
-<link rel="stylesheet" href="~/css/registration.css" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/attendee.css" />
+
+<nav class="custom-navbar navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+    <a class="navbar-brand" href="#">
+        <img src="~/images/logo.png" style="width:60px;">
+    </a>
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/registration" target="_blank">Registration</a>
+      </li>
+      @* <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li> *@
+    </ul>
+  </div>
+</nav>
 
 <div class="container body-content">
     <div class="table-responsive filterable">
@@ -10,7 +38,8 @@
             <thead>
                 <tr class="filters">
                     <th><input type="text" class="form-control" placeholder="Code"></th>
-                    <th><input type="text" class="form-control" placeholder="Name"></th>
+                    <th><input type="text" class="form-control" placeholder="NameEN"></th>
+                    <th><input type="text" class="form-control" placeholder="NameTH"></th>
                     <th><input type="text" class="form-control" placeholder="Checked time"></th>
                     <th><input type="text" class="form-control" placeholder="#"></th>
                 </tr>
@@ -20,13 +49,14 @@
                 {
                     <tr>
                         <td>@item.code</td>
-                        <td>@item.name</td>
+                        <td>@item.nameEN</td>
+                        <td>@item.nameTH</td>
                         <td>@item.checkedDateTime</td>
                         @{
-                            if (item.isChecked) {
-                                <td><a href="/Registration/UnCheckin?code=@item.code">Uncheck-in</a></td>
+                            if (item.isChecked ?? false) {
+                                <td><a href="/attendee/unCheckin?code=@item.code">Uncheck-in</a></td>
                             } else {
-                                <td><a href="/Registration/Checkin?code=@item.code">Check-in</a></td>
+                                <td><a href="/attendee/checkin?code=@item.code">Check-in</a></td>
                             }
                         }
                     </tr>
@@ -36,3 +66,6 @@
     </div>
 </div>
 
+@section Scripts {
+    <script src="~/js/attendee.js"></script>
+}

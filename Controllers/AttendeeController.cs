@@ -10,36 +10,31 @@ using web_registration.Providers;
 
 namespace web_registration.Controllers
 {
-    public class AttendeeController : Controller
+    public class AttendeeController : BaseController
     {
-        private readonly ApplicationDBContext _context;
+        private readonly IAttendeeProvider _attendeeProvider;
         
-        public AttendeeController(ApplicationDBContext context) {
-            _context = context;
-        }
+        public AttendeeController(ApplicationDBContext context, 
+                                 IAttendeeProvider attendeeProvider) : base(context) {
+            _attendeeProvider = attendeeProvider;
+        } 
 
         public IActionResult Index()
         {
-            List<Attendee> attendees = _context.Attendee.ToList();
+            List<Attendee> attendees = _attendeeProvider.GetAttendees(); //_context.Attendee.ToList();
             return View(attendees);
         }
 
         public IActionResult Checkin(int code)
         {
-            var attendee = _context.Attendee.Where(x => x.code == code).FirstOrDefault();
-            attendee.isChecked = true;
-            attendee.checkedDateTime = DateTime.Now;
-            _context.SaveChanges();
+            _attendeeProvider.Checkin(code);
 
             return Redirect("/attendee");
         }
 
         public IActionResult UnCheckin(int code)
         {
-            var attendee = _context.Attendee.Where(x => x.code == code).FirstOrDefault();
-            attendee.isChecked = false;
-            attendee.checkedDateTime = null;
-            _context.SaveChanges();
+            _attendeeProvider.UnCheckin(code);
 
             return Redirect("/attendee");
         }

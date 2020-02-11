@@ -8,9 +8,10 @@ namespace web_registration.Models
         [Key]
         public int code { get; set; }
 
-        public string name { get; set; }
+        public string nameTH { get; set; }
+        public string nameEN { get; set; }
 
-        public Boolean isChecked { get; set; }
+        public bool? isChecked { get; set; }
 
         public DateTime? checkedDateTime { get; set; }
     }

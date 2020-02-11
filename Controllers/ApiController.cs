@@ -40,7 +40,7 @@ namespace web_registration.Controllers
             if (code != null) {
                 attendee = _context.Attendee.Where(x => x.code == code).FirstOrDefault();
             } else if (name != null) {
-                attendee = _context.Attendee.Where(x => x.name == name).FirstOrDefault();
+                attendee = _context.Attendee.Where(x => x.nameEN == name).FirstOrDefault();
             }
             return Ok(attendee);
         }
@@ -49,7 +49,7 @@ namespace web_registration.Controllers
         [Route("checked-list")]
         public async Task<IActionResult> GetCheckedInAttendees()
         {
-            List<Attendee> attendees = _context.Attendee.Where(x => x.isChecked).ToList();
+            List<Attendee> attendees = _context.Attendee.Where(x => x.isChecked ?? false).ToList();
             return Ok(attendees);
         }
 

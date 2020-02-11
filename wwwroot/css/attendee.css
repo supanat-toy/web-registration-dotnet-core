@@ -1,3 +1,7 @@
+body {
+    font-size: 20px;
+}
+
 .filterable {
     margin-top: 15px;
 }
@@ -20,4 +24,10 @@
 }
 .filterable .filters input[disabled]:-ms-input-placeholder {
     color: #333;
+}
+
+/* Navbar */
+
+.custom-navbar {
+    border-radius: 0px;;
 }
