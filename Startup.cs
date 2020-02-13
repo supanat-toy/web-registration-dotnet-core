@@ -53,7 +53,7 @@ namespace web_registration
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection")
             ));
             services.AddTransient<IAttendeeProvider, AttendeeProvider>();
-
+            services.AddSession();
             
         }
 
@@ -73,6 +73,7 @@ namespace web_registration
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

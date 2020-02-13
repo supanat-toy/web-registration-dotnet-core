@@ -24,19 +24,5 @@ namespace web_registration.Controllers
             List<Attendee> attendees = _attendeeProvider.GetAttendees(); //_context.Attendee.ToList();
             return View(attendees);
         }
-
-        public IActionResult Checkin(int code)
-        {
-            _attendeeProvider.Checkin(code);
-
-            return Redirect("/attendee");
-        }
-
-        public IActionResult UnCheckin(int code)
-        {
-            _attendeeProvider.UnCheckin(code);
-
-            return Redirect("/attendee");
-        }
     }
 }

@@ -1,3 +1,4 @@
+@model Attendee
 @{
     ViewData["Title"] = "Attendees";
 }
@@ -9,21 +10,16 @@
 	
 	<div class="content-view">
 		<img class="image-logo" src="~/images/logo.png" /> 
-		<div class="registration-input" hidden>
+		<form asp-controller="Registration" asp-action="Completion" method="post" class="registration-input">
 			<div class="title">ลงทะเบียน</div>
 			<div>
 				<span class="title-input">รหัสพนักงาน</span>
-				<input class="input-code" value="12345678" />
+				<input class="input-code" asp-for="code" />
 			</div>
 			<div class="text-center">
 				<button class="button">Log in</button>
 			</div>
-		</div>
-		<div class="registration-result">
-			<div class="title">ยินดีต้อนรับ</div>
-			<div class="name">คุณสมชาย ขยันยิ่ง</div>
-			<div class="remark">เตรียมลุ้นรับของรางวัลใหญ่ภายในงานมากกว่า 40 รางวัล <br>ผู้โชคดีอาจเป็นคุณ</div>
-		</div>
+		</form>
 	</div>
 	<img class="mage-bottom-page" src="~/images/background-bottom.png" />
 </div>

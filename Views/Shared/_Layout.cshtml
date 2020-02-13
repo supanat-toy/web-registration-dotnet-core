@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var isSuccess = ViewData["isSuccess"] as bool?;
+}
+@isSuccess
+asdasd
+<!DOCTYPE html> 
 <html>
 <head>
     <meta charset="utf-8" />
@@ -16,24 +21,44 @@
 
     <!--     Fonts and icons     -->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-
 </head>
 <body>
-
+<div class="box-loading" style="display: none;">
+	<img src="~/images/loading.gif" />
+</div>
+<div class="box_alert_message">
+    <div id="alert_message_succeed">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <span>Successfully</span>
+    </div>
+    <div id="alert_message_failed">
+        <i class="fa fa-exclamation" aria-hidden="true"></i>
+        <span>Failed</span>
+    </div>
+</div>
     @RenderBody()
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    
 
     @RenderSection("Scripts", required: false)
+
+    <script>
+        function Call_box_alert_message() {
+            var isSuccess = "@isSuccess";
+            var successMessage = "ลงทะเบียนสำเร็จ";
+            var failedMessage = "ไม่พบรหัสนี้";
+            console.log(isSuccess)
+            if (isSuccess.toLowerCase() == "true") {
+                Call_box_alert_message_success(successMessage)
+            } else if (isSuccess.toLowerCase() == "false") {
+                Call_box_alert_message_failed(failedMessage)
+            }
+        }
+    </script>
 </body>
 </html>

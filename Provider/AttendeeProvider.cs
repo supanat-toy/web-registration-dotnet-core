@@ -20,7 +20,7 @@ namespace web_registration.Providers
         // GET: api/Teams
         public List<Attendee> GetAttendees()
         {
-            List<Attendee> attendees = _context.Attendee.ToList();
+            List<Attendee> attendees = _context.Attendee.OrderBy(x => x.code).ToList();
             return attendees;
         }
 
@@ -44,6 +44,9 @@ namespace web_registration.Providers
         public Boolean Checkin(int code)
         {
             var attendee = _context.Attendee.Where(x => x.code == code).FirstOrDefault();
+            if (attendee == null) {
+                return false;
+            }
             attendee.isChecked = true;
             attendee.checkedDateTime = DateTime.Now;
             _context.SaveChanges();
@@ -53,6 +56,9 @@ namespace web_registration.Providers
         public Boolean UnCheckin(int code)
         {
             var attendee = _context.Attendee.Where(x => x.code == code).FirstOrDefault();
+            if (attendee == null) {
+                return false;
+            }
             attendee.isChecked = false;
             attendee.checkedDateTime = null;
             _context.SaveChanges();

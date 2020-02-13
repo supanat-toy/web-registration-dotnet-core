@@ -1,0 +1,21 @@
+@model Attendee
+@{
+    ViewData["Title"] = "Attendees";
+}
+<meta http-equiv="refresh" content="5;url=/registration" />
+
+<link rel="stylesheet" href="~/css/registration.css" />
+
+<div id="attendee">
+	<img class="mage-top-page" src="~/images/background-top.png" />
+	
+	<div class="content-view">
+		<img class="image-logo" src="~/images/logo.png" />
+		<div class="registration-result">
+			<div class="title">ยินดีต้อนรับ</div>
+			<div class="name">คุณ @Model.nameTH</div>
+			<div class="remark">เตรียมลุ้นรับของรางวัลใหญ่ภายในงานมากกว่า 40 รางวัล <br>ผู้โชคดีอาจเป็นคุณ</div>
+		</div>
+	</div>
+	<img class="mage-bottom-page" src="~/images/background-bottom.png" />
+</div>
