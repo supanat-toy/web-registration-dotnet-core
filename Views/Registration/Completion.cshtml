@@ -1,21 +1,29 @@
-@model Attendee
+@model Attendee;
 @{
+	var attendee = TempData["attendee"] as Attendee;
     ViewData["Title"] = "Attendees";
 }
-<meta http-equiv="refresh" content="5;url=/registration" />
+@* <meta http-equiv="refresh" content="5;url=/registration" /> *@
 
 <link rel="stylesheet" href="~/css/registration.css" />
 
-<div id="attendee">
+<div id="registration">
 	<img class="mage-top-page" src="~/images/background-top.png" />
-	
+
 	<div class="content-view">
-		<img class="image-logo" src="~/images/logo.png" />
-		<div class="registration-result">
-			<div class="title">ยินดีต้อนรับ</div>
-			<div class="name">คุณ @Model.nameTH</div>
-			<div class="remark">เตรียมลุ้นรับของรางวัลใหญ่ภายในงานมากกว่า 40 รางวัล <br>ผู้โชคดีอาจเป็นคุณ</div>
+		<div class="col-md-3 col-xs-12">
+			<img class="image-logo" src="~/images/logo.png" /> 
+		</div>
+		<div class="col-md-9 col-xs-12">
+			<div class="registration-result">
+				<div class="title">ยินดีต้อนรับ</div>
+				<div class="name">คุณ @Model.nameTH</div>
+			</div>
 		</div>
 	</div>
+	<div class="box-result-remark ">
+		<div class="result-remark">เตรียมลุ้นรับของรางวัลใหญ่ภายในงานมากกว่า 40 รางวัล <br>ผู้โชคดีอาจเป็นคุณ</div>
+	</div>
+
 	<img class="mage-bottom-page" src="~/images/background-bottom.png" />
 </div>

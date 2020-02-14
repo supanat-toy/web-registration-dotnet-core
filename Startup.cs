@@ -37,8 +37,12 @@ namespace web_registration
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddMemoryCache();
+            services.AddSession();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddSessionStateTempDataProvider();
 
             services.AddSwaggerGen(c =>
             {
@@ -53,7 +57,7 @@ namespace web_registration
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection")
             ));
             services.AddTransient<IAttendeeProvider, AttendeeProvider>();
-            services.AddSession();
+            
             
         }
 
@@ -70,11 +74,11 @@ namespace web_registration
                 app.UseHsts();
             }
 
+            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-            app.UseSession();
-
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

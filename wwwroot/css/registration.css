@@ -4,8 +4,9 @@ html, body {
 	overflow: hidden;
 }
 
-#attendee {
+#registration {
 	background-color: #000;
+	height: 100%;
 }
 
 .image-top-page {
@@ -14,7 +15,6 @@ html, body {
   	left: 0;
   	z-index: 999;
   	width: 100%;
-  	/* height: 23px; */
 }
 
 .image-bottom-page {
@@ -27,79 +27,127 @@ html, body {
 
 .content-view {
 	position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     margin-top: -50px;
     margin-left: -400px;
-    width: 700px;
-	height: 100px;
+    width: 800px;
+	/* height: 150px; */
+	/* background-color: rgba(129, 189, 31, 0.228); */
+	text-align: center;
 }
 
+/* 				(auto)	540px		720px		960px		1140px
+Class prefix	.col-	.col-sm-	.col-md-	.col-lg-	.col-xl- */
+
 .image-logo {
-	height: 250px;
-	position: absolute;
-	top: -100px;
-	left: 0px;
+	width: 350px;
+	margin-top: -180px;
 }
 
 .registration-input {
-	float: right;
+	margin-top: -20px;
 }
 
 .registration-input .title {
-	font-size: 18px;
+	font-size: 60px;
 	text-align: center;
 	color: #fff;
+	margin-left: 150px;
+	margin-bottom: -10px;
 }
 
 .registration-input .title-input {
-	font-size: 18px;
+	font-size: 36px;
 	color: #fff;
 }
 
 .registration-input .input-code {
-	font-size: 18px;
+	font-size: 35px;
 	color: #000;
 	margin: 15px 0px 15px 10px;
-	padding: 3px 15px;
+	padding: 1px 0px;
 	text-align: center;
+	border-radius: 5px;
 }
 
 .registration-input .button {
-	font-size: 20px;
+	font-size: 30px;
 	text-align: center;
 	background-color: #7D7D7D;
 	color: #fff;
-	padding: 3px 30px;
+	padding: 1px 30px;
 	border: none;
-	border-radius: 10px;
+	border-radius: 5px;
+	margin-left: 150px;
+}
+
+@media (max-width: 767.98px) { 
+	.content-view {
+		top: 25%;
+	}
+	.image-logo {
+		width: 300px;
+		margin-top: 0px;
+	}
+	.registration-input .title {
+		margin-left: 0px;
+	}
+	.registration-input .button {
+		margin-left: 0px;
+	}
 }
 
 /* registration-result */
 
 .registration-result {
-	float: right;
+	margin-top: -20px;
+	height: 200px;;
 }
 
 .registration-result .title {
 	color:#fff;
-	font-size: 30px;
+	font-size: 50px;
 	text-align: right;
+	text-decoration: dotted;
 }
 
 .registration-result .name {
 	color:#fff;
-	font-size: 30px;
+	font-size: 50px;
 	text-align: right;
 }
 
-.registration-result .remark {
-	color:#fff;
-	font-size: 18px;
-	text-align: center;
+.box-result-remark {
 	background-image: url("../images/border-display-name.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-size: 100% 100%;
-	padding: 50px 100px;
+	width: 100%;
+	margin-top: -40px;
+}
+
+.box-result-remark .result-remark {
+	color:#fff;
+	font-size: 38px;
+	text-align: center;
+	padding: 80px 100px;
+}
+
+@media (max-width: 767.98px) {
+	.registration-result .title {
+		text-align: center;
+	}
+
+	.registration-result .name {
+		text-align: center;
+	}
+
+	.box-result-remark {
+		margin-top: -40px;
+	}
+
+	.box-result-remark .result-remark {
+		font-size: 30px;
+	}
 }

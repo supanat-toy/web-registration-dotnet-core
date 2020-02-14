@@ -1,4 +1,5 @@
 using System;
+using System.Web;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,30 +20,28 @@ namespace web_registration.Controllers
         private readonly ApplicationDBContext _context;
         private readonly IAttendeeProvider _attendeeProvider;
         
+        [TempData]
+        public bool? isSuccess { get; set; }
+
         public RegistrationController(ApplicationDBContext context, 
                                      IAttendeeProvider attendeeProvider) : base(context) {
             _attendeeProvider = attendeeProvider;
         } 
 
-        public IActionResult Index(bool isError = false)
+        public IActionResult Index()
         {
-            if (isError) {
-                ViewData["isSuccess"] = false;
-            }
             return View();
         }
 
-        [HttpPost]
+        [HttpPost] 
         public IActionResult Completion(Attendee model)
         {
-            var isSuccess = _attendeeProvider.Checkin(model.code);
-
-            if (isSuccess) {
+            isSuccess = _attendeeProvider.Checkin(model.code);
+            if (isSuccess ?? false) {
                 var attendee = _attendeeProvider.GetAttendee(model.code, null);
-                ViewData["isSuccess"] = true;
                 return View("Completion", attendee);
             } else {
-                return Redirect("/registration?isError=true");
+                return Redirect("/registration");
             }
         }
     }

@@ -21,7 +21,7 @@ namespace web_registration.Controllers
 
         public IActionResult Index()
         {
-            List<Attendee> attendees = _attendeeProvider.GetAttendees(); //_context.Attendee.ToList();
+            List<Attendee> attendees = _attendeeProvider.GetAttendees();
             return View(attendees);
         }
     }

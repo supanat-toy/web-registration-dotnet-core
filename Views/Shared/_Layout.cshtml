@@ -1,5 +1,5 @@
 ﻿@{
-    var isSuccess = ViewData["isSuccess"] as bool?;
+    var isSuccess = TempData["isSuccess"] as bool?;
 }
 <!DOCTYPE html> 
 <html>
@@ -27,11 +27,11 @@
 <div class="box_alert_message">
     <div id="alert_message_succeed">
         <i class="fa fa-check" aria-hidden="true"></i>
-        <span>Successfully</span>
+        <span>ลงทะเบียนสำเร็จ</span>
     </div>
     <div id="alert_message_failed">
         <i class="fa fa-exclamation" aria-hidden="true"></i>
-        <span>Failed</span>
+        <span>ไม่พบรหัสนี้</span>
     </div>
 </div>
     @RenderBody()

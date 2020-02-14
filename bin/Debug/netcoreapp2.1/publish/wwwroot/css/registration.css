@@ -1,0 +1,105 @@
+html, body {
+	margin: 0; 
+	height: 100%; 
+	overflow: hidden;
+}
+
+#attendee {
+	background-color: #000;
+}
+
+.image-top-page {
+	position: absolute;
+  	top: 0;
+  	left: 0;
+  	z-index: 999;
+  	width: 100%;
+  	/* height: 23px; */
+}
+
+.image-bottom-page {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 999;
+	width: 100%;
+}
+
+.content-view {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -400px;
+    width: 700px;
+	height: 100px;
+}
+
+.image-logo {
+	height: 250px;
+	position: absolute;
+	top: -100px;
+	left: 0px;
+}
+
+.registration-input {
+	float: right;
+}
+
+.registration-input .title {
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+}
+
+.registration-input .title-input {
+	font-size: 18px;
+	color: #fff;
+}
+
+.registration-input .input-code {
+	font-size: 18px;
+	color: #000;
+	margin: 15px 0px 15px 10px;
+	padding: 3px 15px;
+	text-align: center;
+}
+
+.registration-input .button {
+	font-size: 20px;
+	text-align: center;
+	background-color: #7D7D7D;
+	color: #fff;
+	padding: 3px 30px;
+	border: none;
+	border-radius: 10px;
+}
+
+/* registration-result */
+
+.registration-result {
+	float: right;
+}
+
+.registration-result .title {
+	color:#fff;
+	font-size: 30px;
+	text-align: right;
+}
+
+.registration-result .name {
+	color:#fff;
+	font-size: 30px;
+	text-align: right;
+}
+
+.registration-result .remark {
+	color:#fff;
+	font-size: 18px;
+	text-align: center;
+	background-image: url("../images/border-display-name.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 100% 100%;
+	padding: 50px 100px;
+}
