@@ -1,11 +1,10 @@
 html, body {
 	margin: 0; 
-	height: 100%; 
-	overflow: hidden;
+	height: 100%;
 }
 
 #registration {
-	background-color: #000;
+	background-color: #08070A;
 	height: 100%;
 }
 
@@ -25,15 +24,18 @@ html, body {
 	width: 100%;
 }
 
-.content-view {
+.middle-view {
 	position: absolute;
-    top: 45%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -400px;
-    width: 800px;
-	/* height: 150px; */
-	/* background-color: rgba(129, 189, 31, 0.228); */
+	top: 40%;
+	z-index: 2000;
+	width: 100%;
+}
+
+.content-view {
+	width: 800px;
+	margin: 0px auto;
+	height: auto;
+	overflow: auto;
 	text-align: center;
 }
 
@@ -43,6 +45,7 @@ Class prefix	.col-	.col-sm-	.col-md-	.col-lg-	.col-xl- */
 .image-logo {
 	width: 350px;
 	margin-top: -180px;
+	position: fixed;
 }
 
 .registration-input {
@@ -83,15 +86,27 @@ Class prefix	.col-	.col-sm-	.col-md-	.col-lg-	.col-xl- */
 }
 
 @media (max-width: 767.98px) { 
+	.middle-view {
+		top: 20%;
+	}
 	.content-view {
-		top: 25%;
+		width: 100%;
+		text-align: center;
 	}
 	.image-logo {
 		width: 300px;
 		margin-top: 0px;
+		position: initial;
+		margin-bottom: 20px;
 	}
 	.registration-input .title {
 		margin-left: 0px;
+	}
+	.registration-input .title-input {
+		font-size: 30px;
+	}
+	.registration-input .input-code {
+		font-size: 30px;
 	}
 	.registration-input .button {
 		margin-left: 0px;
@@ -102,7 +117,6 @@ Class prefix	.col-	.col-sm-	.col-md-	.col-lg-	.col-xl- */
 
 .registration-result {
 	margin-top: -20px;
-	height: 200px;;
 }
 
 .registration-result .title {
@@ -132,6 +146,7 @@ Class prefix	.col-	.col-sm-	.col-md-	.col-lg-	.col-xl- */
 	font-size: 38px;
 	text-align: center;
 	padding: 80px 100px;
+	width: 100%;
 }
 
 @media (max-width: 767.98px) {
