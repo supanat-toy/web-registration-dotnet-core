@@ -1,0 +1,31 @@
+@model Attendee
+@{
+    ViewData["Title"] = "Popular Vote";
+}
+
+<link rel="stylesheet" href="~/css/Vote/index.css" />
+
+<div id="index">
+	<img class="image-top-page" src="~/images/background-top.png" />
+	<img class="image-bottom-page" src="~/images/background-bottom.png" />
+	
+	<div class="middle-view">
+		<div class="content-view">
+			<div class="col-md-3 col-xs-12">
+				<img class="image-logo" src="~/images/logo.png" /> 
+			</div>
+			<div class="col-md-9 col-xs-12">
+				<form asp-controller="Vote" asp-action="Teams" method="post" class="vote-input">
+					<div class="title">Popular Vote</div>
+					<div>
+						<span class="title-input">รหัสพนักงาน</span>
+						<input class="input-code" asp-for="code" type="number" />
+					</div>
+					<div class="text-center">
+						<button class="button">Log in</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,32 @@
+@model IEnumerable<Team>
+@{
+    ViewData["Title"] = "Teams";
+    var attendeeCode = ViewData["attendeeCode"] as int?;
+}
+
+<link rel="stylesheet" href="~/css/Vote/teams.css" />
+
+<div id="teams">
+	<img class="image-top-page" src="~/images/background-top.png" />
+    <img class="image-bottom-page" src="~/images/background-bottom.png" />
+    <div class="team-list">
+        <div class="container">
+            <div class="row">
+                @foreach (var team in Model) 
+                {
+                    <div class="col-md-4 col-6">
+                        <form asp-controller="Vote" asp-action="Completion" method="post" class="vote-teams">
+                            <input name="code" value="@attendeeCode" hidden />
+                            <input name="voteTeamId" value="@team.id" hidden />
+                            <img src="https://www.projet-react.org/wp-content/themes/flymag/images/placeholder.png" style="width: 100%;" />
+                            <div class="code">@team.code</div>
+                            <div class="name">@team.name</div>
+                            <button class="button">เลือก</button>
+                        </form>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    
+</div>

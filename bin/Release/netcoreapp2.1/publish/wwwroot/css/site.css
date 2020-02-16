@@ -10,6 +10,10 @@ for details on configuring this project to bundle and minify static web assets. 
     font-style: normal;
   }
   
+html, body {
+	margin: 0; 
+	height: 100%;
+}
 
 body {
     font-family: 'FCActiveRegular' !important;
@@ -99,3 +103,19 @@ body {
             background-color: #ee5641;
             display: none;
         }
+
+.image-top-page {
+	position: absolute;
+  	top: 0;
+  	left: 0;
+  	/* z-index: 999; */
+  	width: 100%;
+}
+
+.image-bottom-page {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	/* z-index: 999; */
+	width: 100%;
+}

@@ -1,0 +1,52 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+#teams {
+    background-color: #08070A;
+}
+
+.team-list {
+    margin-top: 60px;
+    height: 90vh;
+    overflow: scroll;
+    padding: 10px;
+}
+
+.team-list::-webkit-scrollbar {
+    display: block;
+}
+
+.vote-teams {
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(33, 33, 33, 0.7);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(33, 33, 33, 0.7);
+    box-shadow: 0px 0px 5px 1px rgba(33, 33, 33, 0.7);
+    margin-bottom: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.vote-teams image {
+    width: 100%;
+}
+
+.vote-teams .code {
+    font-size: 25px;
+    font-weight: bold;
+    margin: -2px 0px;
+    padding: 0px 10px;
+}
+
+.vote-teams .name {
+    font-size: 15px;
+    padding: 0px 10px;
+    margin-top: -5px;
+}
+
+.vote-teams .button {
+    width: 100%;
+    background-color: rgb(223, 199, 20);
+    color: #000;
+    font-size: 25px;
+}

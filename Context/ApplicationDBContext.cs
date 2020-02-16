@@ -9,5 +9,6 @@ namespace web_registration.Context
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options) { }
 
         public DbSet<Attendee> Attendee { get; set; }
+        public DbSet<Team> Team { get; set; }
     }
 }

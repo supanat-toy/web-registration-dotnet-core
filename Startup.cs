@@ -57,7 +57,7 @@ namespace web_registration
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection")
             ));
             services.AddTransient<IAttendeeProvider, AttendeeProvider>();
-            
+            services.AddTransient<ITeamProvider, TeamProvider>();
             
         }
 

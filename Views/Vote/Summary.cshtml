@@ -1,0 +1,33 @@
+@model IEnumerable<TeamViewModel>
+@{
+    ViewData["Title"] = "Summary";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/attendee.css" />
+
+<partial name="_TopMenu" />
+
+<div class="container body-content">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model) 
+                {
+                    <tr>
+                        <td>@item.code</td>
+                        <td>@item.name</td>
+                        <td>@item.amount</td>
+                    </tr>
+                }  
+            </tbody>
+        </table>
+    </div>
+</div>

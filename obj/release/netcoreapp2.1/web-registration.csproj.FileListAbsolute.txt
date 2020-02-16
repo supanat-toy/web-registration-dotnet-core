@@ -33,3 +33,6 @@
 /Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Release/netcoreapp2.1/Razor/Views/Attendee/Index.g.cshtml.cs
 /Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Release/netcoreapp2.1/Razor/Views/Registration/Completion.g.cshtml.cs
 /Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Release/netcoreapp2.1/Razor/Views/Registration/Index.g.cshtml.cs
+/Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Release/netcoreapp2.1/Razor/Views/Vote/Completion.g.cshtml.cs
+/Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Release/netcoreapp2.1/Razor/Views/Vote/Index.g.cshtml.cs
+/Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Release/netcoreapp2.1/Razor/Views/Vote/Teams.g.cshtml.cs
