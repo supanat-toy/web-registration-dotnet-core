@@ -1,5 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace web_registration.Models
 {
@@ -13,5 +15,11 @@ namespace web_registration.Models
         public bool? isChecked { get; set; }
         public DateTime? checkedDateTime { get; set; }
         public int? voteTeamId { get; set; }
+    }
+
+    public class LotteryAttendeeViewModel
+    {
+        public string name { get; set; }
+        public List<Attendee> attendees { get; set; }
     }
 }

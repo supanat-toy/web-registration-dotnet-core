@@ -1,0 +1,17 @@
+#lottery {
+    font-size: 20px;
+}
+
+.box-lottery {
+    margin-bottom: 15px;
+    border: 1px solid rgba(205, 205, 205, 0.803);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.lottery-name {
+    background-color: rgba(20, 37, 135, 0.92);
+    color: #fff;
+    padding: 5px 10px;
+    
+}
