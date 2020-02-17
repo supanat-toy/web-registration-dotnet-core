@@ -20,8 +20,8 @@
             <thead>
                 <tr class="filters">
                     <th><input type="text" class="form-control" placeholder="Code"></th>
-                    <th><input type="text" class="form-control" placeholder="Name EN"></th>
                     <th><input type="text" class="form-control" placeholder="Name TH"></th>
+                    <th><input type="text" class="form-control" placeholder="Division"></th>
                     <th><input type="text" class="form-control" placeholder="Checked time"></th>
                     <th></th>
                 </tr>
@@ -31,8 +31,8 @@
                 {
                     <tr>
                         <td>@item.code</td>
-                        <td>@item.nameEN</td>
                         <td>@item.nameTH</td>
+                        <td>@item.division</td>
                         <td>@item.checkedDateTime</td>
                         @{
                             if (item.isChecked ?? false) {

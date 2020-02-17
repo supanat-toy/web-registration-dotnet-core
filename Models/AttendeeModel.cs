@@ -7,14 +7,15 @@ namespace web_registration.Models
 {
     public class Attendee
     {
-        public int id { get; set; }
         [Key]
-        public int code { get; set; }
+        public string code { get; set; }
         public string nameTH { get; set; }
         public string nameEN { get; set; }
+        public string division { get; set; }
         public bool? isChecked { get; set; }
         public DateTime? checkedDateTime { get; set; }
         public int? voteTeamId { get; set; }
+        public bool? isTemp { get; set; }
     }
 
     public class LotteryAttendeeViewModel

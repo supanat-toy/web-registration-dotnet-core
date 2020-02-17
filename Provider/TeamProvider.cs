@@ -29,7 +29,7 @@ namespace web_registration.Providers
             return teams;
         }
 
-        public Boolean Vote(int attendeeCode, int teamId) {
+        public Boolean Vote(string attendeeCode, int teamId) {
             var attendee = _attendeeProvider.GetAttendee(attendeeCode, null);
             if (attendee == null) {
                 return false;

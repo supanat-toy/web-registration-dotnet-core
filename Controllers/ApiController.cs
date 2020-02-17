@@ -34,7 +34,7 @@ namespace web_registration.Controllers
 
         [HttpGet]
         [Route("profile")]
-        public async Task<IActionResult> GetAttendee(int code, string name)
+        public async Task<IActionResult> GetAttendee(string code, string name)
         {
             Attendee attendee = null;
             if (code != null) {
@@ -55,7 +55,7 @@ namespace web_registration.Controllers
 
         [HttpPost]
         [Route("check-in")]
-        public async Task<IActionResult> Checkin(int code)
+        public async Task<IActionResult> Checkin(string code)
         {
             var attendee = _context.Attendee.Where(x => x.code == code).FirstOrDefault();
             attendee.isChecked = true;
@@ -66,7 +66,7 @@ namespace web_registration.Controllers
 
         [HttpPost]
         [Route("uncheck-in")]
-        public async Task<IActionResult> UnCheckin(int code, string name)
+        public async Task<IActionResult> UnCheckin(string code, string name)
         {
             var attendee = _context.Attendee.Where(x => x.code == code).FirstOrDefault();
             attendee.isChecked = false;

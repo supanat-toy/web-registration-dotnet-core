@@ -12,7 +12,7 @@ namespace web_registration.Providers
     public interface ITeamProvider
     {
         List<Team> GetTeams();
-        Boolean Vote(int attendeeCode, int teamId);
+        Boolean Vote(string attendeeCode, int teamId);
         List<TeamViewModel> GetSummaryScoreTeams();
     }
 }

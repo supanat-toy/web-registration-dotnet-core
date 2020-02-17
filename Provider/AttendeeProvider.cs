@@ -24,7 +24,7 @@ namespace web_registration.Providers
             return attendees;
         }
 
-        public Attendee GetAttendee(int code, string name)
+        public Attendee GetAttendee(string code, string name)
         {
             Attendee attendee = null;
             if (code != null) {
@@ -41,7 +41,7 @@ namespace web_registration.Providers
             return attendees;
         }
 
-        public Boolean Checkin(int code)
+        public Boolean Checkin(string code)
         {
             var attendee = _context.Attendee.Where(x => x.code == code).FirstOrDefault();
             if (attendee == null) {
@@ -53,7 +53,7 @@ namespace web_registration.Providers
             return true;
         }
 
-        public Boolean UnCheckin(int code)
+        public Boolean UnCheckin(string code)
         {
             var attendee = _context.Attendee.Where(x => x.code == code).FirstOrDefault();
             if (attendee == null) {

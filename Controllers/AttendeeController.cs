@@ -26,6 +26,27 @@ namespace web_registration.Controllers
             return View(attendees);
         }
 
+        public IActionResult Checkin(string code)
+        {
+            var attendee = _context.Attendee.Where(x => x.code == code).FirstOrDefault();
+            attendee.isChecked = true;
+            attendee.checkedDateTime = DateTime.Now;
+            _context.SaveChanges();
+
+            return Redirect("/attendee");
+        }
+
+        public IActionResult UnCheckin(string code)
+        {
+            var attendee = _context.Attendee.Where(x => x.code == code).FirstOrDefault();
+            attendee.isChecked = false;
+            attendee.checkedDateTime = null;
+            _context.SaveChanges();
+
+            return Redirect("/attendee");
+        }
+
+
         public IActionResult Lottery()
         {
             List<Attendee> attendees = _attendeeProvider.GetAttendees();

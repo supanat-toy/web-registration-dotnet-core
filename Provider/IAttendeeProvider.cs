@@ -12,9 +12,9 @@ namespace web_registration.Providers
     public interface IAttendeeProvider
     {
         List<Attendee> GetAttendees();
-        Attendee GetAttendee(int code, string name);
+        Attendee GetAttendee(string code, string name);
         List<Attendee> GetCheckedInAttendees();
-        Boolean Checkin(int code);
-        Boolean UnCheckin(int code);
+        Boolean Checkin(string code);
+        Boolean UnCheckin(string code);
     }
 }
