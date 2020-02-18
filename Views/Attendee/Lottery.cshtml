@@ -11,15 +11,15 @@
 <div id="lottery">
     <div class="container">
         @foreach (var lottery in Model) {
-            <div class="box-lottery">
-                <div class="lottery-name">@lottery.name</div>
+            <div class="box-table">
+                <div class="title">@lottery.name</div>
                 <div class="table-responsive">
-                    <table class="table table-striped">
+                    <table class="table table-striped table-bordered">
                         <thead>
                             <tr>
                                 <th>Code</th>
-                                <th>Name EN</th>
                                 <th>Name TH</th>
+                                <th style="width: 35%;">Division</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -27,8 +27,8 @@
                             {
                                 <tr>
                                     <td>@item.code</td>
-                                    <td>@item.nameEN</td>
                                     <td>@item.nameTH</td>
+                                    <td>@item.division</td>
                                 </tr>
                                 }  
                         </tbody>

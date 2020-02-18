@@ -76,7 +76,7 @@ using web_registration.Models;
             WriteLiteral("\n");
             EndContext();
             BeginContext(62, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "49d0b37181204756b9c6c22c8414e26a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d03a127c668b4beb9601997bbbe75bb3", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -95,7 +95,7 @@ using web_registration.Models;
             WriteLiteral("\n\n<div id=\"index\">\n\t");
             EndContext();
             BeginContext(135, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b5f538f6a21e4c0b85e93d8b4a7728b2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "97bd0ea10b7344fba14e8fba8fd2c075", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -114,7 +114,7 @@ using web_registration.Models;
             WriteLiteral("\n\t");
             EndContext();
             BeginContext(201, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "cda7384e014644f2840d84e3ac97e09b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "34f4fb5e2dca45a8819e03afba5a88f8", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -133,7 +133,7 @@ using web_registration.Models;
             WriteLiteral("\n\t\n\t<div class=\"middle-view\">\n\t\t<div class=\"content-view\">\n\t\t\t<div class=\"col-md-3 col-xs-12\">\n\t\t\t\t");
             EndContext();
             BeginContext(370, 50, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "300c6d2ab4ca4a6eb9e3d47bf2b5973f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3a1df79cc9cc40b0a25bd13d63256ed2", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -152,12 +152,12 @@ using web_registration.Models;
             WriteLiteral(" \n\t\t\t</div>\n\t\t\t<div class=\"col-md-9 col-xs-12\">\n\t\t\t\t");
             EndContext();
             BeginContext(472, 361, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b9c059a3dd244b6090056915013848ea", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "25c93de04e4c44f298fcec32004dc1c2", async() => {
                 BeginContext(552, 112, true);
                 WriteLiteral("\n\t\t\t\t\t<div class=\"title\">Popular Vote</div>\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<span class=\"title-input\">รหัสพนักงาน</span>\n\t\t\t\t\t\t");
                 EndContext();
                 BeginContext(664, 57, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8153d450e265475d8025a10a74cb2e96", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2b9d4251a9454636ab45d935af14c772", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();

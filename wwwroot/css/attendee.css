@@ -2,8 +2,15 @@ body {
     font-size: 20px;
 }
 
+.card-amount-value {
+    padding: 5px 15px;
+    color: #fff;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
 .filterable {
-    margin-top: 15px;
+    
 }
 .filterable .panel-heading .pull-right {
     margin-top: -20px;
@@ -18,7 +25,7 @@ body {
 }
 .filterable .filters input[disabled]::-webkit-input-placeholder {
     color: #333;
-}
+}.filterable
 .filterable .filters input[disabled]::-moz-placeholder {
     color: #333;
 }

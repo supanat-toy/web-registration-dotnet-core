@@ -53,6 +53,7 @@ namespace web_registration.Providers
                     id = item.id,
                     code = item.code,
                     name = item.name,
+                    division = item.division,
                     amount = amount
                 };
                 teamViewModels.Add(newModel);
