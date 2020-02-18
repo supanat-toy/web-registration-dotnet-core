@@ -21,7 +21,7 @@ namespace web_registration.Controllers
         private readonly IAttendeeProvider _attendeeProvider;
         
         [TempData]
-        public bool? isSuccess { get; set; }
+        public string errorMessage { get; set; }
 
         public RegistrationController(ApplicationDBContext context, 
                                      IAttendeeProvider attendeeProvider) : base(context) {
@@ -36,12 +36,17 @@ namespace web_registration.Controllers
         [HttpPost] 
         public IActionResult Completion(Attendee model)
         {
-            isSuccess = _attendeeProvider.Checkin(model.code);
-            if (isSuccess ?? false) {
-                var attendee = _attendeeProvider.GetAttendee(model.code, null);
-                return View("Completion", attendee);
-            } else {
+            var attendee = _attendeeProvider.GetAttendee(model.code, null);
+
+            if (attendee == null) {
+                errorMessage = "ไม่พบรหัสพนักงาน";
                 return Redirect("/registration");
+            } else if (attendee.isChecked ?? false) {
+                errorMessage = "ลงชื่อเข้าร่วมงานแล้ว";
+                return Redirect("/registration");
+            } else {
+                _attendeeProvider.Checkin(model.code);
+                return View("Completion", attendee);
             }
         }
     }

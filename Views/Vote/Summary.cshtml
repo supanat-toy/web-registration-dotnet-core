@@ -1,12 +1,22 @@
 @model IEnumerable<TeamViewModel>
 @{
     ViewData["Title"] = "Summary";
+    var attendees = ViewData["Attendees"] as List<Attendee>;
+
+    var amountVoted = attendees.Where(x => x.voteTeamId != null).ToList().Count();
+    var amountNotVoted = attendees.Where(x => x.voteTeamId == null).ToList().Count();
 }
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="~/css/attendee.css" />
 
 <partial name="_TopMenu" />
+
+<div class="text-center">
+    <span class="card-amount-value" style="background-color:#000;">Total: @attendees.Count()</span>
+    <span class="card-amount-value" style="background-color:rgb(47, 155, 52);">Voted: @amountVoted</span>
+    <span class="card-amount-value" style="background-color:rgb(184, 33, 33);">Not Voted: @amountNotVoted</span>
+</div>
 
 <div class="container body-content">
     <div class="box-table">
