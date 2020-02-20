@@ -3,7 +3,7 @@ $(document).ready(function(){
         
         var $panel = $(this).parents('.filterable'),
         $filters = $panel.find('.filters input'),
-        $tbody = $panel.find('.table tbody');
+        $tbody = $panel.find('.custom-table tbody');
         if ($filters.prop('disabled') == true && false) {
             $filters.prop('disabled', false);
             $filters.first().focus();
@@ -23,7 +23,7 @@ $(document).ready(function(){
         inputContent = $input.val().toLowerCase(),
         $panel = $input.parents('.filterable'),
         column = $panel.find('.filters th').index($input.parents('th')),
-        $table = $panel.find('.table'),
+        $table = $panel.find('.custom-table'),
         $rows = $table.find('tbody tr');
         /* Dirtiest filter function ever ;) */
         var $filteredRows = $rows.filter(function(){

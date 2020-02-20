@@ -8,7 +8,7 @@ namespace web_registration.Models
         [Key]
         public int id { get; set; }
         
-        public int code { get; set; }
+        public string code { get; set; }
         public string division { get; set; }
 
         public string name { get; set; }
@@ -18,7 +18,7 @@ namespace web_registration.Models
     {
         public int id { get; set; }
         
-        public int code { get; set; }
+        public string code { get; set; }
 
         public string name { get; set; }
         public string division { get; set; }

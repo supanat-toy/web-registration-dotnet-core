@@ -3,7 +3,7 @@ body {
 }
 
 .filterable {
-    margin-top: 15px;
+    
 }
 .filterable .panel-heading .pull-right {
     margin-top: -20px;
@@ -18,7 +18,7 @@ body {
 }
 .filterable .filters input[disabled]::-webkit-input-placeholder {
     color: #333;
-}
+}.filterable
 .filterable .filters input[disabled]::-moz-placeholder {
     color: #333;
 }

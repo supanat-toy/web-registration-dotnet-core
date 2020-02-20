@@ -28,8 +28,13 @@ namespace web_registration.Controllers
             _attendeeProvider = attendeeProvider;
         } 
 
-        public IActionResult Index()
+        public IActionResult Index(string e = null)
         {
+            if (e == "o") {
+                ViewData["errorMessage"] = "ไม่พบรหัสพนักงาน";
+            } else if (e == "d") {
+                ViewData["errorMessage"] = "ลงชื่อเข้าร่วมงานแล้ว";
+            }
             return View();
         }
 
@@ -39,11 +44,9 @@ namespace web_registration.Controllers
             var attendee = _attendeeProvider.GetAttendee(model.code, null);
 
             if (attendee == null) {
-                errorMessage = "ไม่พบรหัสพนักงาน";
-                return Redirect("/registration");
+                return Redirect("/registration?e=o");
             } else if (attendee.isChecked ?? false) {
-                errorMessage = "ลงชื่อเข้าร่วมงานแล้ว";
-                return Redirect("/registration");
+                return Redirect("/registration?e=d");
             } else {
                 _attendeeProvider.Checkin(model.code);
                 return View("Completion", attendee);

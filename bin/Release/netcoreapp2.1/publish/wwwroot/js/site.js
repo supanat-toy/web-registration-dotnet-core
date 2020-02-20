@@ -7,14 +7,14 @@ $(function(){
     Call_box_alert_message()
 })
 
-function Call_box_alert_message_success(message) {
-    console.log("Call_box_alert_message_success")
-    $("span", "#alert_message_succeed").text(message)
-    $("#alert_message_succeed").slideDown(200);
-    setTimeout(function () {
-        $("#alert_message_succeed").slideUp(100);
-    }, 3000);
-}
+// function Call_box_alert_message_success(message) {
+//     console.log("Call_box_alert_message_success")
+//     $("span", "#alert_message_succeed").text(message)
+//     $("#alert_message_succeed").slideDown(200);
+//     setTimeout(function () {
+//         $("#alert_message_succeed").slideUp(100);
+//     }, 30000);
+// }
 
 function Call_box_alert_message_failed(message) {
     console.log("Call_box_alert_message_failed")

@@ -12,7 +12,7 @@ namespace web_registration.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return Redirect("/registration");
         }
 
         public IActionResult About()

@@ -21,8 +21,8 @@ namespace web_registration.Controllers
         private readonly IAttendeeProvider _attendeeProvider;
         private readonly ITeamProvider _teamProvider;
 
-        [TempData]
-        public string errorMessage { get; set; }
+        // [TempData]
+        // public string errorMessage { get; set; }
 
         public VoteController(ApplicationDBContext context, 
                                      IAttendeeProvider attendeeProvider,
@@ -31,8 +31,15 @@ namespace web_registration.Controllers
             _teamProvider = teamProvider;
         } 
 
-        public IActionResult Index()
+        public IActionResult Index(string e = null)
         {
+            if (e == "o") {
+                ViewData["errorMessage"] = "ไม่พบรหัสพนักงาน";
+            } else if (e == "d") {
+                ViewData["errorMessage"] = "รหัสนี้โหวตเรียบร้อยแล้ว";
+            } else if (e == "s") {
+                ViewData["errorMessage"] = "ไม่พบทีมที่โหวต";
+            }
             return View();
         }
 
@@ -50,12 +57,10 @@ namespace web_registration.Controllers
         {
             var attendee = _attendeeProvider.GetAttendee(model.code, null);
 
-            if (attendee == null) {
-                errorMessage = "ไม่พบรหัสพนักงาน";
-                return Redirect("/vote");
+            if (attendee == null || (attendee.isTemp ?? false) == true) {
+                return Redirect("/vote?e=o");
             } else if (attendee.voteTeamId != null) {
-                errorMessage = "รหัสนี้โหวตเรียบร้อยแล้ว";
-                return Redirect("/vote");
+                return Redirect("/vote?e=d");
             } else {
                 var teams = _teamProvider.GetTeams();
                 ViewData["attendeeCode"] = attendee.code;
@@ -76,8 +81,7 @@ namespace web_registration.Controllers
         public IActionResult Completion(Attendee model)
         {
             if (model.voteTeamId == null) {
-                errorMessage = "ไม่พบทีมที่โหวต";
-                return Redirect("/vote");
+                return Redirect("/vote?e=s");
             }
 
             _teamProvider.Vote(model.code, model.voteTeamId ?? 0);

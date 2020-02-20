@@ -55,7 +55,7 @@ using web_registration.Models;
             WriteLiteral("<nav class=\"custom-navbar navbar navbar-expand-md bg-dark navbar-dark\">\n  <!-- Brand -->\n    <a class=\"navbar-brand\" href=\"#\">\n        ");
             EndContext();
             BeginContext(135, 49, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "6fc0f6bc807f4468a622f72f66e1d2c2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "68c3fb9b39b74cf89aad16853e2910fe", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
