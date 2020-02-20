@@ -52,7 +52,7 @@ namespace web_registration.Controllers
 
         public IActionResult Lottery()
         {
-            List<Attendee> attendees = _attendeeProvider.GetAttendees().Where(x => (x.isTemp ?? false) == false).ToList();
+            List<Attendee> attendees = _attendeeProvider.GetAttendees().Where(x => ((x.isTemp ?? false) == false) && (x.isChecked ?? false)).ToList();
             attendees = Shuffle(attendees);
 
             Tuple<String, int, List<Attendee>>[] awardList =
