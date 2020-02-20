@@ -1,3 +1,8 @@
 #lottery {
     font-size: 20px;
+    padding: 40px 0px;
+}
+
+body {
+    background-color:rgb(59, 59, 70);
 }

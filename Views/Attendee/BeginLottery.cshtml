@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Lottery Lucky";
+}
+
+<script>
+    function randomLottery() {
+        $('#loading').show()
+        setTimeout(function(){ 
+            location.replace("/attendee/lottery");
+        }, 2000);
+    }
+</script>
+
+<link rel="stylesheet" href="~/css/registration.css" />
+
+<div id="registration">
+	<img class="image-top-page" src="~/images/background-top.png" />
+	
+	<div class="middle-view">
+		<div class="row content-view">
+			<div class="col-md-3 col-xs-12">
+				<img class="image-logo" src="~/images/logo.png" /> 
+			</div>
+			<div class="col-md-9 col-xs-12">
+				<div class="registration-input">
+					<div class="title">สุ่มจับสลากรางวัล</div>
+					<div class="text-center">
+						<button class="button" onClick=randomLottery()>เริ่มสุ่ม</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<img class="image-bottom-page" src="~/images/background-bottom.png" />
+</div>

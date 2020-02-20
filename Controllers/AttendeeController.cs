@@ -46,6 +46,9 @@ namespace web_registration.Controllers
             return Redirect("/attendee");
         }
 
+        public IActionResult BeginLottery() {
+            return View();
+        }
 
         public IActionResult Lottery()
         {
@@ -64,6 +67,7 @@ namespace web_registration.Controllers
                 Tuple.Create("Canon EOS M50 มูลค่า 25,900  บาท", 1, new List<Attendee>()),
                 Tuple.Create("Ipad Air Cel+wifi 256 GB มูลค่า 27,400 บาท", 1, new List<Attendee>()),
                 Tuple.Create("Samsung note10 256GB มูลค่า 32,900 บาท", 1, new List<Attendee>()),
+                Tuple.Create("รางวัลจากคุณนิตยา", 1, new List<Attendee>()),
                 Tuple.Create("Iphone 11 Pro max 256 GB มูลค่า 45,900 บาท", 1, new List<Attendee>()),
                 Tuple.Create("Central 500 บาท 30 ใบ", 30, new List<Attendee>()),
                 Tuple.Create("Starbucks 500 บาท 30 ใบ", 30, new List<Attendee>()),

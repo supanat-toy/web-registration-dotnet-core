@@ -59,11 +59,11 @@ body {
 }
 
 .box-loading {
-    background-color: rgba(0, 0, 0, 0.703);
+    background-color: rgba(0, 0, 0, 0.700);
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 1002;
+    z-index: 4002; 
 }
 
 .box-loading img {
@@ -72,7 +72,7 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    height: 130px;
+    height: 100px;
 }
 
 .box_alert_message {

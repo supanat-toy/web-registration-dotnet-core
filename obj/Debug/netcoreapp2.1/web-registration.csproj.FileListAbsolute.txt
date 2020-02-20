@@ -39,3 +39,4 @@
 /Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_TopMenu.g.cshtml.cs
 /Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Debug/netcoreapp2.1/Razor/Views/Vote/Summary.g.cshtml.cs
 /Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Debug/netcoreapp2.1/Razor/Views/Attendee/Lottery.g.cshtml.cs
+/Users/toy/Documents/Programing_Project/Web/C#/API/web-registration/obj/Debug/netcoreapp2.1/Razor/Views/Attendee/BeginLottery.g.cshtml.cs
