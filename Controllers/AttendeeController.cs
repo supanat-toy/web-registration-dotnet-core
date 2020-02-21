@@ -52,7 +52,8 @@ namespace web_registration.Controllers
 
         public IActionResult Lottery()
         {
-            List<Attendee> attendees = _attendeeProvider.GetAttendees().Where(x => ((x.isTemp ?? false) == false) && (x.isChecked ?? false)).ToList();
+            var specialAttendees = new List<string>(){"1044461", "1044496", "1044355", "1044615", "1052492", "1075840", "1078732", "1075842", "1052488", "1052497"};
+            List<Attendee> attendees = _attendeeProvider.GetAttendees().Where(x => specialAttendees.Contains(x.code) || ((x.isTemp ?? false) == false) && (x.isChecked ?? false)).ToList();
             attendees = Shuffle(attendees);
 
             Tuple<String, int, List<Attendee>>[] awardList =
@@ -70,8 +71,9 @@ namespace web_registration.Controllers
                 Tuple.Create("รางวัลจากคุณนิตยา", 1, new List<Attendee>()),
                 Tuple.Create("Iphone 11 Pro max 256 GB มูลค่า 45,900 บาท", 1, new List<Attendee>()),
                 Tuple.Create("Central 500 บาท 30 ใบ", 30, new List<Attendee>()),
-                Tuple.Create("Starbucks 500 บาท 30 ใบ", 30, new List<Attendee>()),
-                Tuple.Create("Starbucks 300 บาท 60 ใบ", 60, new List<Attendee>())
+                Tuple.Create("Central 1,000 บาท 40 ใบ", 40, new List<Attendee>()),
+                Tuple.Create("Starbucks 300 บาท 60 ใบ", 60, new List<Attendee>()),
+                Tuple.Create("Starbucks 500 บาท 30 ใบ", 30, new List<Attendee>())
             };
 
             var lotteryAttendeeViewModels = new List<LotteryAttendeeViewModel>();
