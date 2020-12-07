@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/supanat/Documents/Programing_Project/Web/C#/API/web-registration/web-registration.csproj": {}
+    "/Users/Admin/Documents/Programing_Project/Web/C#/API/web-registration/web-registration.csproj": {}
   },
   "projects": {
-    "/Users/supanat/Documents/Programing_Project/Web/C#/API/web-registration/web-registration.csproj": {
+    "/Users/Admin/Documents/Programing_Project/Web/C#/API/web-registration/web-registration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/supanat/Documents/Programing_Project/Web/C#/API/web-registration/web-registration.csproj",
+        "projectUniqueName": "/Users/Admin/Documents/Programing_Project/Web/C#/API/web-registration/web-registration.csproj",
         "projectName": "web-registration",
-        "projectPath": "/Users/supanat/Documents/Programing_Project/Web/C#/API/web-registration/web-registration.csproj",
-        "packagesPath": "/Users/supanat/.nuget/packages/",
-        "outputPath": "/Users/supanat/Documents/Programing_Project/Web/C#/API/web-registration/obj/",
+        "projectPath": "/Users/Admin/Documents/Programing_Project/Web/C#/API/web-registration/web-registration.csproj",
+        "packagesPath": "/Users/Admin/.nuget/packages/",
+        "outputPath": "/Users/Admin/Documents/Programing_Project/Web/C#/API/web-registration/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/supanat/.nuget/NuGet/NuGet.Config"
+          "/Users/Admin/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
@@ -51,7 +51,6 @@
               "version": "[2.1.2, )"
             },
             "Microsoft.NETCore.App": {
-              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
